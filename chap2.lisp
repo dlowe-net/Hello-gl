@@ -1,4 +1,4 @@
-;;;; hello-gl.lisp
+;;;; chap2.lisp
 
 (in-package #:hello-gl)
 
@@ -212,8 +212,8 @@ hello-gl program."
               :opengl-attributes '((:sdl-gl-doublebuffer 1)))
   (gl:viewport 0 0 width height))
 
-(defun run ()
-  "Starts the hello-gl shader demonstration"
+(defun chap2 ()
+  "Starts the hello-gl chapter 2 shader demonstration"
   (sdl:with-init (sdl:sdl-init-video)
     (setup-display 640 480)
     (setf *elapsed-time* 0)

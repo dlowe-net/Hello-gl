@@ -13,8 +13,10 @@ dependencies:
 * lispbuilder-sdl-gfx
 * cl-opengl
 
-Load the hello-gl with asdf, then execute with:
+Load the hello-gl system with asdf, then execute with:
 
-    (hello-gl:run)
+    (hello-gl:chap2)  ;; for chapter 2
+
+You can exit by pressing the `q' or `escape' keys.
 
 [intro]:http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Chapter-1:-The-Graphics-Pipeline.html

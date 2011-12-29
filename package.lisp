@@ -2,5 +2,5 @@
 
 (defpackage #:hello-gl
   (:use #:cl)
-  (:export #:run))
+  (:export #:chap2))
 
