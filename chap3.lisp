@@ -153,9 +153,7 @@ hello-gl program."
                    (zerop *texture-1*))))
   (setf *vertex-shader*
         (make-shader :vertex-shader
-                     (alexandria:read-file-into-string
-                      (or vertex-shader-path
-                          (hello-gl-path "hello-gl.v.glsl")))))
+                     (alexandria:read-file-into-string vertex-shader-path)))
   (setf *fragment-shader*
         (make-shader :fragment-shader +fragment-shader-source+))
   (setf *program* (make-program *vertex-shader* *fragment-shader*))
@@ -210,7 +208,7 @@ hello-gl program."
     (setup-display 640 480)
     (setf *timer* 0)
     (setf cl-opengl-bindings:*gl-get-proc-address* #'sdl:sdl-gl-get-proc-address)
-    (make-resources path)
+    (make-resources (or path (hello-gl-path "chap3/hello-gl.v.glsl")))
     (sdl:update-display)
     (setf (sdl:frame-rate) 60)
     (sdl:with-events ()
